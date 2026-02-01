@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dear Precious, Will you be my Valentine? 💕</title>
+    <title>Will you be my Valentine? 💕</title>
     <style>
         * {
             margin: 0;
@@ -67,6 +68,7 @@
             display: flex;
             gap: 20px;
             justify-content: center;
+            align-items: center;
             position: relative;
             min-height: 60px;
         }
@@ -94,7 +96,6 @@
         #noBtn {
             background: #e0e0e0;
             color: #666;
-            position: absolute;
             transition: all 0.3s ease;
         }
 
@@ -187,7 +188,7 @@
             😺
             <span class="heart">❤️</span>
         </div>
-        <h1>Will you be my Valentine?</h1>
+        <h1>Dear Precious, Will you be my Valentine?</h1>
         <div class="buttons">
             <button id="yesBtn">Yes</button>
             <button id="noBtn">No</button>
@@ -211,6 +212,9 @@
 
         // Function to move the No button to a random position
         function moveNoButton() {
+            // Make it absolutely positioned when it starts moving
+            noBtn.style.position = 'absolute';
+            
             const containerRect = container.getBoundingClientRect();
             const btnRect = noBtn.getBoundingClientRect();
             
